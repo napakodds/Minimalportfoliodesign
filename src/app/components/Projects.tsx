@@ -38,16 +38,16 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="projects" className="py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-12 sm:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6">
             Featured Projects
           </h2>
           <p className="text-lg text-foreground/60 leading-relaxed">
@@ -64,13 +64,13 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="group p-8 liquid-glass hover:shadow-[0_14px_40px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.55)] transition-all duration-300"
+              className="group p-6 sm:p-8 liquid-glass hover:shadow-[0_14px_40px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.55)] transition-all duration-300"
             >
               <div className="mb-4">
                 <span className="text-xs uppercase tracking-wider text-secondary">
                   {project.category}
                 </span>
-                <h3 className="text-2xl mt-2 mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-xl sm:text-2xl mt-2 mb-4 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
               </div>

@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
     { id: "home", label: "Home" },
@@ -49,6 +51,7 @@ export function Navigation() {
         behavior: "smooth",
       });
     }
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -57,7 +60,7 @@ export function Navigation() {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div
           className={`flex items-center justify-between h-20 px-4 lg:px-6 transition-all duration-300 ${
             scrolled ? "liquid-glass mt-3" : "bg-transparent"
@@ -67,7 +70,7 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-4xl leading-none"
+            className="text-2xl sm:text-3xl md:text-4xl leading-none"
           >
             <span className="text-primary [font-family:'Petit_Formal_Script',cursive] tracking-normal">
               Nan Napak
@@ -99,7 +102,36 @@ export function Navigation() {
               </motion.button>
             ))}
           </div>
+
+          <button
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="md:hidden w-11 h-11 rounded-xl liquid-glass-subtle text-primary flex items-center justify-center"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
+
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-3 p-3 liquid-glass">
+            <div className="grid grid-cols-2 gap-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`px-3 py-2 rounded-lg text-sm text-left transition-colors ${
+                    activeSection === item.id
+                      ? "text-primary bg-white/35"
+                      : "text-foreground/75 hover:bg-white/25"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </motion.nav>
   );

@@ -10,7 +10,7 @@ import { WaterBackground } from "./components/WaterBackground";
 
 export default function App() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-x-hidden">
       <WaterBackground />
       <Navigation />
       <main>

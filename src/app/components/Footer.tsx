@@ -4,7 +4,7 @@ import { Heart } from "lucide-react";
 export function Footer() {
   return (
     <footer className="py-12 border-t border-border">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -18,7 +18,7 @@ export function Footer() {
             <Heart className="w-4 h-4 text-primary fill-primary" />
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-foreground/60">
+          <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/60">
             <a
               href="#home"
               className="hover:text-primary transition-colors"

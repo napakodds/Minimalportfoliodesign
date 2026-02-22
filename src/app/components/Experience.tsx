@@ -42,16 +42,16 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-32 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="experience" className="py-20 md:py-32 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-12 sm:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6">
             Experience
           </h2>
           <p className="text-lg text-foreground/60 leading-relaxed">
@@ -68,14 +68,14 @@ export function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="relative pl-8 border-l-2 border-primary/20"
+              className="relative pl-5 sm:pl-8 border-l-2 border-primary/20"
             >
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
               
-              <div className="p-8 liquid-glass">
+              <div className="p-6 sm:p-8 liquid-glass">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="text-2xl mb-2">{exp.role}</h3>
+                    <h3 className="text-xl sm:text-2xl mb-2">{exp.role}</h3>
                     <div className="flex items-center gap-2 text-secondary">
                       <Briefcase className="w-4 h-4" />
                       <span>{exp.company}</span>

@@ -43,16 +43,16 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="contact" className="py-20 md:py-32 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-12 sm:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6">
             Let's Connect
           </h2>
           <p className="text-lg text-foreground/60 leading-relaxed">
@@ -61,7 +61,7 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -69,7 +69,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm mb-2">
                   Name

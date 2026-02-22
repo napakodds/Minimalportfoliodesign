@@ -4,7 +4,7 @@ import heroImage from "@/assets/68a8be4f2ba68041a207d382244c5d5e40207f56.png";
 
 export function Hero() {
   const heroTitleClass =
-    "text-5xl sm:text-6xl lg:text-5xl xl:text-6xl tracking-[-0.02em] leading-[0.9] text-primary uppercase";
+    "text-4xl sm:text-5xl lg:text-5xl xl:text-6xl tracking-[-0.02em] leading-[0.9] text-primary uppercase";
 
   const scrollToAbout = () => {
     const element = document.getElementById("about");
@@ -23,12 +23,12 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-20"
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 w-full">
-        <div className="relative grid grid-cols-12 gap-8 items-center">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-14 sm:py-20 w-full">
+        <div className="relative grid grid-cols-12 gap-7 sm:gap-8 items-center">
           {/* Left Side - Title Part 1 & CTA */}
-          <div className="col-span-12 lg:col-span-4 space-y-8">
+          <div className="col-span-12 lg:col-span-4 space-y-7 sm:space-y-8 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -49,12 +49,12 @@ export function Hero() {
             >
               <button
                 onClick={scrollToAbout}
-                className="group px-8 py-4 text-primary hover:text-primary/80 transition-all inline-flex items-center gap-2 liquid-glass"
+                className="group px-6 sm:px-8 py-3.5 sm:py-4 text-primary hover:text-primary/80 transition-all inline-flex items-center gap-2 liquid-glass"
               >
                 <span>Discover More</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              <p className="text-sm text-foreground/60 max-w-xs leading-relaxed">
+              <p className="text-sm text-foreground/60 max-w-xs mx-auto lg:mx-0 leading-relaxed">
                 Expert analysis that transforms complex data into strategic business insights
               </p>
             </motion.div>
@@ -64,7 +64,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="p-6 max-w-xs liquid-glass"
+              className="p-6 max-w-xs mx-auto lg:mx-0 liquid-glass"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 liquid-glass-subtle">
@@ -103,17 +103,17 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="absolute -bottom-4 -right-4 px-7 py-4 liquid-glass"
+              className="absolute bottom-2 right-2 sm:-bottom-4 sm:-right-4 px-5 py-3 sm:px-7 sm:py-4 liquid-glass"
             >
               <p className="text-xs text-secondary uppercase tracking-wider mb-1">
                 Experience
               </p>
-              <p className="text-2xl text-primary">5+ Years</p>
+              <p className="text-xl sm:text-2xl text-primary">5+ Years</p>
             </motion.div>
           </motion.div>
 
           {/* Right Side - Title Part 2 & Stats */}
-          <div className="col-span-12 lg:col-span-4 space-y-8">
+          <div className="col-span-12 lg:col-span-4 space-y-7 sm:space-y-8 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -132,7 +132,7 @@ export function Hero() {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-primary p-6 lg:ml-auto max-w-xs liquid-glass"
+              className="text-primary p-6 lg:ml-auto max-w-xs mx-auto lg:mx-0 liquid-glass"
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
@@ -178,7 +178,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary hover:text-primary transition-colors"
+        className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary hover:text-primary transition-colors"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}

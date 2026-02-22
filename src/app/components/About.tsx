@@ -21,16 +21,16 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="about" className="py-20 md:py-32 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
+          className="max-w-3xl mb-12 sm:mb-20"
         >
-          <h2 className="text-4xl lg:text-5xl tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6">
             About Me
           </h2>
           <p className="text-lg text-foreground/60 leading-relaxed mb-6">
@@ -55,7 +55,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="p-8 liquid-glass"
+              className="p-6 sm:p-8 liquid-glass"
             >
               <value.icon className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl mb-3">{value.title}</h3>
