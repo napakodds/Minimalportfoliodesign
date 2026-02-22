@@ -2,7 +2,7 @@
 
 :root {
   --font-size: 16px;
-  --background: #F4E9CC;
+  --background: #e5e9e4;
   --foreground: #2a2a2a;
   --card: #ffffff;
   --card-foreground: #2a2a2a;
@@ -10,11 +10,11 @@
   --popover-foreground: #2a2a2a;
   --primary: #5E211D;
   --primary-foreground: #ffffff;
-  --secondary: #9E9C91;
+  --secondary: #8c948d;
   --secondary-foreground: #ffffff;
-  --muted: #f5f5f5;
+  --muted: #e8ede8;
   --muted-foreground: #717182;
-  --accent: #f8f8f8;
+  --accent: #edf2ed;
   --accent-foreground: #2a2a2a;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
@@ -117,6 +117,40 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer components {
+  .liquid-glass {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 1.25rem;
+    background: linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.28) 55%,
+      rgba(255, 255, 255, 0.18) 100%
+    );
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    box-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  }
+
+  .liquid-glass-subtle {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.9rem;
+    background: linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.24) 55%,
+      rgba(255, 255, 255, 0.14) 100%
+    );
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow:
+      0 6px 18px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
 }
 
 @layer base {

@@ -55,7 +55,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white p-8 rounded-sm"
+              className="p-8 liquid-glass"
             >
               <value.icon className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl mb-3">{value.title}</h3>

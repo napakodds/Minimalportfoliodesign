@@ -60,7 +60,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * categoryIndex }}
-              className="bg-muted/30 p-8 rounded-sm"
+              className="p-8 liquid-glass"
             >
               <category.icon className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-xl mb-6">{category.title}</h3>

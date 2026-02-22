@@ -64,7 +64,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="group bg-white border border-border rounded-sm p-8 hover:shadow-xl transition-all duration-300"
+              className="group p-8 liquid-glass hover:shadow-[0_14px_40px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.55)] transition-all duration-300"
             >
               <div className="mb-4">
                 <span className="text-xs uppercase tracking-wider text-secondary">
@@ -83,7 +83,7 @@ export function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-muted/50 text-xs rounded-sm text-foreground/70"
+                    className="px-3 py-1 text-xs text-foreground/70 liquid-glass-subtle"
                   >
                     {tag}
                   </span>

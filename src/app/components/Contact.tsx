@@ -81,7 +81,7 @@ export function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-white border border-border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="w-full px-4 py-3 text-foreground liquid-glass-subtle focus:outline-none focus:ring-2 focus:ring-primary/20"
                   placeholder="Your name"
                   required
                 />
@@ -98,7 +98,7 @@ export function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-white border border-border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="w-full px-4 py-3 text-foreground liquid-glass-subtle focus:outline-none focus:ring-2 focus:ring-primary/20"
                   placeholder="your@email.com"
                   required
                 />
@@ -115,7 +115,7 @@ export function Contact() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   rows={6}
-                  className="w-full px-4 py-3 bg-white border border-border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none"
+                  className="w-full px-4 py-3 text-foreground liquid-glass-subtle focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none"
                   placeholder="Tell me about your project..."
                   required
                 />
@@ -123,7 +123,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-primary text-white rounded-sm hover:bg-primary/90 transition-colors"
+                className="w-full px-8 py-4 text-primary liquid-glass hover:text-primary/80 transition-colors"
               >
                 Send Message
               </button>
@@ -147,7 +147,7 @@ export function Contact() {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="flex items-start gap-4"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-sm flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-xl liquid-glass-subtle flex items-center justify-center flex-shrink-0">
                   <info.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div>

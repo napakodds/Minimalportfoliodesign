@@ -72,7 +72,7 @@ export function Experience() {
             >
               <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
               
-              <div className="bg-white p-8 rounded-sm">
+              <div className="p-8 liquid-glass">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl mb-2">{exp.role}</h3>
