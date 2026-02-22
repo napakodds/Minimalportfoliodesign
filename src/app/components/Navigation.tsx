@@ -67,9 +67,11 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-4xl font-black tracking-wide leading-none"
+            className="text-3xl md:text-4xl leading-none"
           >
-            <span className="text-primary uppercase">Nan Nannan</span>
+            <span className="text-primary [font-family:'Petit_Formal_Script',cursive] tracking-normal">
+              Nan Napak
+            </span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-8">
