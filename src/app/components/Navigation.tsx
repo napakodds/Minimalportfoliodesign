@@ -67,9 +67,9 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl tracking-tight"
+            className="text-3xl md:text-4xl font-black tracking-wide leading-none"
           >
-            <span className="text-primary">BA</span>
+            <span className="text-primary uppercase">Nan Nannan</span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-8">
